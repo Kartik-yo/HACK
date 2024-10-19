@@ -5,13 +5,7 @@
 - [Architecture](#architecture)
 - [Prerequisites](#prerequisites)
 - [Project Structure](#project-structure)
-- [Implementation Stages](#implementation-stages)
-- [Setup Instructions](#setup-instructions)
-- [Configuration](#configuration)
-- [Monitoring](#monitoring)
-- [Security](#security)
-- [Contributing](#contributing)
-- [License](#license)
+
 
 ## 🎯 Overview
 HACK (Helm, AWS, CI/CD, Kubernetes) is a comprehensive infrastructure project implementing secure and scalable microservices deployment using modern cloud-native technologies. The project leverages AWS cloud services, Terraform for infrastructure as code, Helm for package management, HashiCorp Vault for secrets management, and Prometheus/Grafana for monitoring.
