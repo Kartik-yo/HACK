@@ -1,8 +1,5 @@
 # HACK Project: Cloud-Native Infrastructure Implementation
 
-![Project Status](https://img.shields.io/badge/status-in%20development-green)
-![License](https://img.shields.io/badge/license-MIT-blue)
-
 ## 📋 Table of Contents
 - [Overview](#overview)
 - [Architecture](#architecture)
