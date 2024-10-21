@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-sample-service
+  labels:
+    app: my-sample-service
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-sample-service
+  template:
+    metadata:
+      labels:
+        app: my-sample-service
+    spec:
+      containers:
+        - name: my-sample-container
+          image: nginx:latest  # Replace with your microservice image
+          ports:
+            - containerPort: 80
+          envFrom:
+            - configMapRef:
+                name: my-sample-config
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 30
+            periodSeconds: 10
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 5
+            periodSeconds: 5
