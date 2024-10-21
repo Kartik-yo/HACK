@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-sample-service
+  labels:
+    app: my-sample-service
+spec:
+  type: ClusterIP  # Use LoadBalancer for external access
+  ports:
+    - port: 80
+      targetPort: 80
+  selector:
+    app: my-sample-service
