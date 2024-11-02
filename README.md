@@ -56,3 +56,4 @@ HACK (Helm, AWS, CI/CD, Kubernetes) is a comprehensive infrastructure project im
 └── .github/                # GitHub Actions Workflows
     └── workflows/
 ```
+note: added cicd .yaml for automated build, test (using eslinter) and deploy ,not now but after builiding this project.
