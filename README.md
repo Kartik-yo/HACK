@@ -37,23 +37,33 @@ HACK (Helm, AWS, CI/CD, Kubernetes) is a comprehensive infrastructure project im
 
 ## 📁 Project Structure
 ```plaintext
-.
-├── terraform/                  # Infrastructure as Code
-│   ├── modules/
-│   ├── environments/
-│   └── variables.tf
-├── helm/                      # Helm Charts
-│   ├── charts/
-│   └── values/
-├── kubernetes/               # Kubernetes Manifests
-│   ├── namespaces/
-│   └── configurations/
-├── monitoring/              # Monitoring Configuration
-│   ├── prometheus/
-│   └── grafana/
-├── vault/                   # Vault Configuration
-│   └── policies/
-└── .github/                # GitHub Actions Workflows
-    └── workflows/
+├── README.md
+├── deployment
+│   └── microservice
+│       ├── helm-chart
+│       │   ├── Chart.yaml
+│       │   ├── templates
+│       │   │   ├── configmap.yaml
+│       │   │   ├── deployment.yaml
+│       │   │   └── service.yaml
+│       │   └── values.yaml
+│       ├── logs
+│       │   └── 1.txt  # Log file (placeholder for now)
+│       └── scripts
+│           ├── cleanup.sh
+│           ├── debug.sh
+│           └── deploy.sh
+├── infra
+│   └── terraform
+│       ├── backend.tf
+│       ├── main.tf
+│       ├── outputs.tf
+│       ├── provider.tf
+│       └── variables.tf
+└── sample-microservice
+    ├── Dockerfile
+    └── src
+        ├── app.py
+        └── requirements.txt
 ```
 note: added cicd .yaml for automated build, test (using eslinter) and deploy ,not now but after builiding this project.
